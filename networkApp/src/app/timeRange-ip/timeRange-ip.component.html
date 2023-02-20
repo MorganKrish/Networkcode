@@ -1,0 +1,33 @@
+<app-side-nav></app-side-nav>
+<div class="form-outline">
+    <input type="text" id="typePhone" class="form-control" [(ngModel)]="dat1"  placeholder="Enter from date" style="position: relative;
+    left: 600px;
+    height: 24px;
+    
+    border-radius: 3px;
+    color: white;"/>
+    <input type="text" id="typePhone" class="form-control" [(ngModel)]="dat2"  placeholder="enter ToDate " style="position: relative;
+    left: 400px;
+    height: 24px;
+    
+    border-radius: 3px;
+    color: white;"/>
+    
+    <button type="submit" class="btn btn-secondary" (click)="showTab()" style="position: relative;
+    left: 600px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 3px;
+    color: white;">Start RECONCILIATION</button>
+  </div>
+  <ag-grid-angular
+  style="width: 1100px;
+  height: 650px;
+  position: relative;
+  left: 200px;" 
+    class="ag-theme-alpine"
+  [columnDefs]="colDef1"
+  [rowData]="rowDt"
+  [defaultColDef]="defaultColDef">
+
+  </ag-grid-angular>
